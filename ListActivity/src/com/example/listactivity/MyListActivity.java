@@ -25,7 +25,11 @@ public class MyListActivity extends ListActivity {
 				"WebOS", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
 				"Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2", "Ubuntu",
 				"Windows7", "Max OS X", "Linux", "OS/2" };
-		MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, values);
+		// 単純なArrayAdapterのカスタムクラス
+		// MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, values);
+		
+		// performance optimizeしたArrayAdapterのカスタムクラス
+		MyPerformanceArrayAdapter adapter = new MyPerformanceArrayAdapter(this, values);
 		setListAdapter(adapter);
 	}
 
