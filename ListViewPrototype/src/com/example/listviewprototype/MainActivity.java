@@ -28,9 +28,19 @@ public class MainActivity extends ListActivity {
 						"URLはリンクに変換できるか？\n",
 				"高瀬 憲祐"
 				));
+		list.add(get(
+				"http://icons-search.com/img/icons-land/IconsLandVistaStyleEmoticonsDemo.zip/IconsLandVistaStyleEmoticonsDemo-PNG-256x256-Adore.png-256x256.png",
+				"tajima",
+				"11月28日 12:00",
+				"URLはリンクに変換できるか？\n" +
+						"→できそうです。\n" +
+						"https://www.google.co.jp/ \n",
+				"高瀬 憲祐"
+				));
 		return list;
 	}
 	
+	// 個々らへんをモデルに抽象化する
 	private Post get(String mediaImageUrl, String mediaName, String postingTs, String content, String insertUserName) {
 		return new Post(mediaImageUrl, mediaName, postingTs, content, insertUserName);
 	}
