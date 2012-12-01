@@ -10,4 +10,5 @@
 * px指定の廃止
 * テストてすとてすと(http://developer.android.com/tools/testing/index.html)
 
+## 今日の進捗
 ![Screenshot_from_2012-12-01](https://raw.github.com/uv-beluga/android-examples/master/ListViewPrototype/Screenshot_from_2012-12-01.png)
