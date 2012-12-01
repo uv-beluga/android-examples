@@ -44,4 +44,13 @@
 		android:layout_toRightOf="@id/media_image"
         android:textSize="10px" />
     
+    <TextView
+        android:id="@+id/insert_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/insert_user_name"
+        android:layout_below="@id/content"
+		android:layout_toRightOf="@id/media_image"
+        android:textSize="10px" />
+
 </RelativeLayout>

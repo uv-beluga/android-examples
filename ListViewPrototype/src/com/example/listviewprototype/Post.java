@@ -6,13 +6,15 @@ public class Post {
 	private String mediaName;
 	private String postingTs; // TODO Date型にすべき？
 	private String content;
+	private String insertUserName;
 	
 	// TODO インタフェース要検討
-	public Post(String mediaImageUrl, String mediaName, String postingTs, String content) {
+	public Post(String mediaImageUrl, String mediaName, String postingTs, String content, String insertUserName) {
 		this.mediaImageUrl = mediaImageUrl;
 		this.mediaName = mediaName;
 		this.postingTs = postingTs;
 		this.content = content;
+		this.insertUserName = insertUserName;
 	}
 	
 	public String getMediaImageUrl() {
@@ -45,5 +47,13 @@ public class Post {
 	
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public String getInsertUserNama() {
+		return this.insertUserName;
+	}
+	
+	public void setInsertUserName(String insertUserName) {
+		this.insertUserName = insertUserName;
 	}
 }

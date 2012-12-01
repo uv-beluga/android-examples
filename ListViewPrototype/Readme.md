@@ -8,3 +8,4 @@
     * Twitter
 * styleの分離(http://developer.android.com/guide/topics/ui/themes.html)
 * px指定の廃止
+* テストてすとてすと(http://developer.android.com/tools/testing/index.html)

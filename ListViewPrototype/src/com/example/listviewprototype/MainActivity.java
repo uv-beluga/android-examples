@@ -25,13 +25,14 @@ public class MainActivity extends ListActivity {
 				"11月28日 10:00",
 				"facebookページへの投稿内容を表示する。\n" +
 						"複数行で表示。\n" +
-						"URLはリンクに変換できるか？\n"
+						"URLはリンクに変換できるか？\n",
+				"高瀬 憲祐"
 				));
 		return list;
 	}
 	
-	private Post get(String mediaImageUrl, String mediaName, String postingTs, String content) {
-		return new Post(mediaImageUrl, mediaName, postingTs, content);
+	private Post get(String mediaImageUrl, String mediaName, String postingTs, String content, String insertUserName) {
+		return new Post(mediaImageUrl, mediaName, postingTs, content, insertUserName);
 	}
 	
 	@Override

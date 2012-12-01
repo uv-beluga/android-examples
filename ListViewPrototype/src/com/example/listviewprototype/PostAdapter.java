@@ -29,6 +29,7 @@ public class PostAdapter extends ArrayAdapter<Post> {
 		protected TextView mediaName;
 		protected TextView postingTs;
 		protected TextView content;
+		protected TextView insertUserName;
 	}
 	
 	@Override
@@ -44,6 +45,7 @@ public class PostAdapter extends ArrayAdapter<Post> {
 			viewHolder.mediaName = (TextView) view.findViewById(R.id.media_name);
 			viewHolder.postingTs = (TextView) view.findViewById(R.id.posting_ts);
 			viewHolder.content = (TextView) view.findViewById(R.id.content);
+			viewHolder.insertUserName = (TextView) view.findViewById(R.id.insert_user_name);
 			view.setTag(viewHolder);
 		}
 
@@ -51,6 +53,7 @@ public class PostAdapter extends ArrayAdapter<Post> {
 		holder.mediaName.setText(list.get(position).getMediaName());
 		holder.postingTs.setText(list.get(position).getPostingTs());
 		holder.content.setText(list.get(position).getContent());
+		holder.insertUserName.setText("投稿者：" + list.get(position).getInsertUserNama());
 
 		// AsyncTask(http://d.hatena.ne.jp/Nagise/20120309/1331265123)
 		AsyncTask<String, Void, Drawable> task = new AsyncTask<String, Void, Drawable>() {
