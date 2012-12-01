@@ -10,4 +10,4 @@
 * px指定の廃止
 * テストてすとてすと(http://developer.android.com/tools/testing/index.html)
 
-![Screenshot_from_2012-12-01](./Screenshot_from_2012-12-01 11:02:14.png)
+![Screenshot_from_2012-12-01](./Screenshot_from_2012-12-01.png)
