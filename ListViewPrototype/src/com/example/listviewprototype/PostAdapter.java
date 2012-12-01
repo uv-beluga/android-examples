@@ -7,6 +7,7 @@ import java.util.List;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,9 @@ public class PostAdapter extends ArrayAdapter<Post> {
 			viewHolder.content = (TextView) view.findViewById(R.id.content);
 			viewHolder.insertUserName = (TextView) view.findViewById(R.id.insert_user_name);
 			view.setTag(viewHolder);
+		}
+		else {
+			view = convertView;
 		}
 
 		final ViewHolder holder = (ViewHolder) view.getTag();
