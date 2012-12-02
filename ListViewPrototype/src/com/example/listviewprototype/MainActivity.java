@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.Menu;
@@ -61,6 +63,7 @@ public class MainActivity extends Activity implements OnItemClickListener,
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
                 float velocityY) {
+            Log.v("LogCat", "onFling");
             float dx = Math.abs(velocityX);
             float dy = Math.abs(velocityY);
             if (dx > dy && dx > 150) {
@@ -107,6 +110,7 @@ public class MainActivity extends Activity implements OnItemClickListener,
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		ArrayAdapter<Post> adapter1 = new PostAdapter(this, getPosts());
 		ArrayAdapter<Post> adapter2 = new PostAdapter(this, getPosts2());
 		
@@ -116,6 +120,21 @@ public class MainActivity extends Activity implements OnItemClickListener,
 		lv2.setAdapter(adapter2);
 		
 		initFlipper();
+
+		// 初期データ読み込み
+		searchList();
+	}
+	
+	@Override
+	protected void onStart() {
+		super.onStart();
+		
+		// 未ログインの場合はログイン画面を表示する
+		// 【Android開発】グローバル変数的な共通のクラス（Java）(http://se-suganuma.blogspot.jp/2010/02/androidjava.html)
+		if (!Share.isLoggedIn()) {
+			Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+			startActivity(intent);
+		}
 	}
 
 	private List<Post> getPosts() {
@@ -192,9 +211,6 @@ public class MainActivity extends Activity implements OnItemClickListener,
         // フリック処理のためのイベント設定
         mListView1.setOnTouchListener(mTouchListener);
         mListView2.setOnTouchListener(mTouchListener);
-
-        // 初期データ読み込み
-        searchList();
 	}
 
     @Override
