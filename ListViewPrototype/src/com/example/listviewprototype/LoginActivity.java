@@ -1,7 +1,8 @@
 package com.example.listviewprototype;
 
+import java.util.HashMap;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +32,13 @@ public class LoginActivity extends Activity {
 				alert.setPositiveButton("OK", null);
 				alert.show();
 				*/
+				
+				WebService webService = new WebService();
+				HashMap<String, String> map = new HashMap<String, String>();
+				map.put("email", email);
+				map.put("password", password);
+				
+				webService.get(map);
 				
 				User user = new User();
 				user.setUsername(email);
