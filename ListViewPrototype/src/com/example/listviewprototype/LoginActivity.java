@@ -38,7 +38,7 @@ public class LoginActivity extends Activity {
 				map.put("email", email);
 				map.put("password", password);
 				
-				webService.get(map);
+				//webService.get(map);
 				
 				User user = new User();
 				user.setUsername(email);

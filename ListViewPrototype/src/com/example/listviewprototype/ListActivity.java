@@ -22,7 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ViewFlipper;
 
-public class MainActivity extends Activity implements OnItemClickListener,
+public class ListActivity extends Activity implements OnItemClickListener,
 	OnItemLongClickListener {
 
 	//フリックで画面を横スクロールする方法(http://www.toyomane.com/jm/develop-memo/android/101.html)
@@ -132,7 +132,7 @@ public class MainActivity extends Activity implements OnItemClickListener,
 		// 未ログインの場合はログイン画面を表示する
 		// 【Android開発】グローバル変数的な共通のクラス（Java）(http://se-suganuma.blogspot.jp/2010/02/androidjava.html)
 		if (!Share.isLoggedIn()) {
-			Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+			Intent intent = new Intent(ListActivity.this, LoginActivity.class);
 			startActivity(intent);
 		}
 	}
